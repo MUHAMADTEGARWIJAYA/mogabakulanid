@@ -11,12 +11,12 @@ const Umkm = db.define(
     },
     provinsi_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
 
     kota_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
 
     nama_toko: {
