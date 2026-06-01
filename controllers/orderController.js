@@ -572,7 +572,10 @@ export const confirmOrderByBuyer = async (req, res) => {
     // ===========================
     // 💰 PINDAHKAN SALDO TERTAHAN → TERSEDIA
     // ===========================
-    if (order.payment_status === "paid") {
+    if (
+      order.payment_method === "midtrans" &&
+      order.payment_status === "paid"
+    ) {
       const totalMasuk = Number(order.total_harga) + Number(order.ongkir);
 
       const saldo = await UmkmSaldo.findOne({

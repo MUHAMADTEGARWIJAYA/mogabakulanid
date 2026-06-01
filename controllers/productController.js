@@ -268,7 +268,7 @@ export const getIsOpen = async (req, res) => {
     }
 
     const umkm = await Umkm.findByPk(umkmId, {
-      attributes: ["id", "nama_toko", "is_open", "createdAt"],
+      attributes: ["id", "nama_toko", "is_open"],
     });
 
     if (!umkm) {
