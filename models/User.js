@@ -20,7 +20,7 @@ const User = db.define(
     },
     preferensi: {
       type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+      allowNull: true,
     },
 
     password: {
